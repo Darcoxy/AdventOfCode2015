@@ -1,7 +1,7 @@
 dimensions = []
 total = 0
 
-with open(r"C:\Users\postl\Desktop\Personal\Projects\AdventOfCode2015\Day2\Day2_1_Input.txt") as my_file:
+with open(r"C:\Users\postl\Desktop\Personal\Projects\AdventOfCode2015\Day2\input.txt") as my_file:
     for line in my_file:
         dimensions.append(line)
 
