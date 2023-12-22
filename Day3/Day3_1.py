@@ -18,5 +18,4 @@ for element in moves:
     else: yCoordinate = yCoordinate - 1
     fullCoordinate = str(xCoordinate) + ',' + str(yCoordinate)
     coordinatesList.append(fullCoordinate)
-#print(coordinatesList)
 print(len(set(coordinatesList)))
