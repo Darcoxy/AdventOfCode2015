@@ -10,7 +10,7 @@ with open(r"C:\Users\JJ\Desktop\Projects\AdventOfCode2015\Day3\input.txt") as my
 
 for element in moves:
     if element == '>':
-        xCoordinate =+ 1
+        xCoordinate = xCoordinate + 1
     elif element == '<':
         xCoordinate = xCoordinate - 1
     elif element == '^':
@@ -18,4 +18,5 @@ for element in moves:
     else: yCoordinate = yCoordinate - 1
     fullCoordinate = str(xCoordinate) + ',' + str(yCoordinate)
     coordinatesList.append(fullCoordinate)
+#print(coordinatesList)
 print(len(set(coordinatesList)))
