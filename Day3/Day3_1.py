@@ -4,7 +4,7 @@ yCoordinate = 0
 coordinatesList = []
 fullCoordinate = coordinatesList.append(str(xCoordinate) + ',' + str(yCoordinate))
 
-with open(r"C:\Users\JJ\Desktop\Projects\AdventOfCode2015\Day3\input.txt") as my_file:
+with open(r"input.txt") as my_file:
     for character in my_file:
         moves = list(character)
 
