@@ -18,6 +18,8 @@ def checkForVowels(element):
         if character in vowels:
             vowelCount += 1
         else: continue
+    if vowelCount == 3: return True
+    return False
 
 def checkForConsecutiveLetters(element):
     count = 0
@@ -28,14 +30,23 @@ def checkForConsecutiveLetters(element):
             else: count += 1
         except IndexError:
             return False
+
+def checkForBadStrings(badStrings, element):
+    for badVowel in badStrings:
+        if badVowel in element:
+            return False
+        else: continue
+    return True
         
 
 def evaluateList(list):
     for element in list:
-        result = checkForConsecutiveLetters(element)
-        if result: return True
-
-
+        resultForVowels = checkForVowels(element)
+        resultForConsecutiveLetters = checkForConsecutiveLetters(element)
+        resultForBadStrings = checkForBadStrings(badStrings, element)
+        
+        if resultForVowels and resultForConsecutiveLetters and resultForBadStrings: return True
+        else: return False
 
 lines = getListOfLines(file)
 print(evaluateList(lines))
