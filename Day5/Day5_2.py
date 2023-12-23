@@ -14,6 +14,14 @@ def checkForPairs(element):
     for character in element:
         try:
             pair = element[count] + element[count + 1]
+            pairAsAList = list(pair)
+            if pairAsAList[0] == pairAsAList[1]:
+                if count > 0:
+                    if element[count -1] or element[count + 2] == pairAsAList[0]:
+                        return False
+                else:
+                    if element[count + 2] == pairAsAList[0]:
+                        return False
             if pair in element:
                 newString = element.replace(pair, '', 1)
                 if pair in newString:
@@ -34,7 +42,7 @@ def evaluateList(list):
     goodCount = 0
     for element in list:
         #tests for strings
-         if checkForPairs(element) and checkForRepeatCharacters(element):
+         if checkForPairs(element):
              goodCount += 1
     return goodCount
 
