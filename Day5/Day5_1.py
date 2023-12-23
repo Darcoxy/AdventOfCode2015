@@ -40,13 +40,15 @@ def checkForBadStrings(badStrings, element):
         
 
 def evaluateList(list):
+    goodCount = 0
     for element in list:
         resultForVowels = checkForVowels(element)
         resultForConsecutiveLetters = checkForConsecutiveLetters(element)
         resultForBadStrings = checkForBadStrings(badStrings, element)
         
-        if resultForVowels and resultForConsecutiveLetters and resultForBadStrings: return True
-        else: return False
+        if resultForVowels and resultForConsecutiveLetters and resultForBadStrings:
+            goodCount += 1
+    return goodCount
 
 lines = getListOfLines(file)
 print(evaluateList(lines))
