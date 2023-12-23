@@ -19,11 +19,23 @@ def checkForVowels(element):
             vowelCount += 1
         else: continue
 
+def checkForConsecutiveLetters(element):
+    count = 0
+    for character in element:
+        try:    
+            if character in element[count + 1] == character:
+                return True
+            else: count += 1
+        except IndexError:
+            return False
+        
+
 def evaluateList(list):
     for element in list:
-        result = checkForVowels(element)
+        result = checkForConsecutiveLetters(element)
         if result: return True
-        
+
+
 
 lines = getListOfLines(file)
 print(evaluateList(lines))
