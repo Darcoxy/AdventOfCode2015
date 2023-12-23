@@ -8,8 +8,7 @@ def createCandidate(input, number):
     candidate = input + str(number)
     return candidate
 
-input = 'abcdef'
-# target = '00000'
+input = 'iwrupvqb'
 count = 0
 firstCharacters = ''
 
